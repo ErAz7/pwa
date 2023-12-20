@@ -28,17 +28,17 @@ const PWAInitailizer = () => {
 
   //! Check if the PWA is installed or using descktop
   useMemo(() => {
-    if (
-      navigator.userAgent.match(
-        /iPhone|iPad|iPod|Android|Windows Phone|BlackBerry|Symbian|WebOS|Ubuntu Touch|Tizen|Firefox OS/i
-      ) ||
-      window.matchMedia("(display-mode: standalone)").matches ||
-      window.navigator.standalone ||
-      isInstalled
-    ) {
-        alert(1);
-      setModalVisibility("hidden");
-    }
+    // if (
+    //   navigator.userAgent.match(
+    //     /iPhone|iPad|iPod|Android|Windows Phone|BlackBerry|Symbian|WebOS|Ubuntu Touch|Tizen|Firefox OS/i
+    //   ) ||
+    //   window.matchMedia("(display-mode: standalone)").matches ||
+    //   window.navigator.standalone ||
+    //   isInstalled
+    // ) {
+    //     alert(1);
+    //   setModalVisibility("hidden");
+    // }
   }, []); 
 
   //! install the app
