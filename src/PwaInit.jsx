@@ -36,6 +36,7 @@ const PWAInitailizer = () => {
       window.navigator.standalone ||
       isInstalled
     ) {
+        alert(1);
       setModalVisibility("hidden");
     }
   }, []); 
@@ -75,6 +76,7 @@ const PWAInitailizer = () => {
           localStorage.setItem("isInstalled", "true");
         }
       }
+      alert(2)
       setInstallPrompt(null);
       setModalVisibility("hidden");
     } catch (error) {
@@ -102,7 +104,7 @@ const PWAInitailizer = () => {
       <span className="text-blue-500 flex justify-end gap-10 w-[100%]">
         <button
           className="focus:outline-none p-0 m-0 w-fit"
-          onClick={() => setModalVisibility("hidden")}
+          onClick={() => {alert(3); setModalVisibility("hidden");}}
         >
           Cancel
         </button>
@@ -157,7 +159,7 @@ const PWAInitailizer = () => {
     return (
       <button
         className="p-0 w-16 h-16 text-[30px] font-extralight text-[#878787]  border-[0px] border-solid border-[#878787] rounded-[50%] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] absolute bottom-2 right-2"
-        onClick={() => setModalVisibility("hidden")}
+        onClick={() => {alert(4);setModalVisibility("hidden");}}
         id="install"
       >
         ×
