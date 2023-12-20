@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-
+const hasPush = ('PushManager' in window);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
