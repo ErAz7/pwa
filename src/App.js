@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+const hasPush = ('PushManager' in window);
 function App() {
   return (
     <div className="App">
@@ -9,6 +9,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          {hasPush}
+          <br />
+          {new Date()}
         </p>
         <a
           className="App-link"
